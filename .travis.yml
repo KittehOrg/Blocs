@@ -1,0 +1,16 @@
+language: java
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+notifications:
+  email: false
+deploy:
+  provider: releases
+  api_key:
+    secure: ZTN3fC4CQNA+8fvShBca9YO0xvoW6gT6812z0JiS/gr9LSO1T2Gx1G6/b9tREvh6arCgSsu74d08E3ZL5tDj+j6UvKSVMZCR6NGeK0+6R+w3c1j/1cfRtnHwMeiHj0qUA0NmnqKnHqNa3bK0TBD37ANsOHfHT5XgVqWaHwy+wpBoZUQLvv4LW6IOpKypz2rB8K19qoIRkntsGbLTaRkAmBr0StzDh4deIUF1QkejY1rY4amEBInPyrn9pfW9Iy1yjuOQOMVnVixKbAohlm4dIanMCjIKqw6AV/6mSI0RhUKvdc4OFVPXTZBOUOqQZfa2zOp1cwTy4FHw90K30+Qv+1pTabzbSjYxGOMnTFdT8JDQ1HYLpLK6tCJASIil8ASFkPrnJV06fr55K93EQPSErbzr1puCudP7d65RSx9yYk+bD7BrMdtN1jbI2zBr/3D+bAxGTv7aplhRRmP6aZCgjRN/uc/qw7sQtM6iFbU2DhjaBvs9i310Tor4UT8IhdF/ktb5x4RxveUx1g/PKwbLRRhD2KzjCgK1aHYxwJaXQxfUnyfJWqIGpdwlFi5Ar5UDn4ONpA6QRKf1EdF3eqCAOUtQM11SFXIMyQCmrzBSTdFcRTsQmGWYP7mwvBOJe3U+QeiNJ7LxBZ9bN2Tb/s6m9wDP92cAcb0I0A8kyQ6CLcI=
+  file: target/Blocs.jar
+  skip-cleanup: true
+  on:
+    tags: true
